@@ -1,8 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Image } from "react-native";
-
 
 const { width } = Dimensions.get('window');
 
@@ -11,26 +9,34 @@ export default function Onboarding() {
 
   return (
     <View style={styles.container}>
+      {/* Skip Button */}
       <TouchableOpacity onPress={() => router.push('/SignUp')} style={styles.skipButton}>
         <Text style={styles.skipText}>Skip</Text>
       </TouchableOpacity>
 
+      {/* Illustration */}
       <View style={styles.imagePlaceholder}>
-         <Image source={require('../../assets/images/home.png')} />
-        <Text style={styles.illustrationText}>[Illustration here]</Text>
+        <Image 
+          source={require('../../assets/images/home.png')} 
+          style={styles.image} 
+          resizeMode="contain" 
+        />
       </View>
 
+      {/* Indicator Dots */}
       <View style={styles.indicatorRow}>
         <View style={[styles.dot, styles.activeDot]} />
         <View style={styles.dot} />
         <View style={styles.dot} />
       </View>
 
+      {/* Title & Subtitle */}
       <Text style={styles.title}>You are safe here</Text>
       <Text style={styles.subtitle}>
         Zimsisters is your private space to track your cycle, ask questions and grow
       </Text>
 
+      {/* Next Button */}
       <TouchableOpacity onPress={() => router.push('/Onboarding2')} style={styles.nextButton}>
         <Text style={styles.nextButtonText}>›</Text>
       </TouchableOpacity>
@@ -61,10 +67,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 20,
+    overflow: 'hidden',
   },
-  illustrationText: {
-    color: '#ccc',
-    fontSize: 18,
+  image: {
+    width: '90%',
+    height: '90%',
   },
   indicatorRow: {
     flexDirection: 'row',
