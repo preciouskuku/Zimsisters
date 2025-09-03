@@ -25,7 +25,7 @@ export default function Onboarding() {
           useNativeDriver: true,
         }),
         Animated.timing(translateX, {
-          toValue: 0, // back to center
+          toValue: -10, // back to center
           duration: 400,
           easing: Easing.inOut(Easing.ease),
           useNativeDriver: true,
@@ -41,7 +41,7 @@ export default function Onboarding() {
       </TouchableOpacity>
 
       <View style={styles.imagePlaceholder}>
-        <Image source={require("../../assets/images/home.png")} />
+        <Image source={require("../../assets/images/onboard.png")} />
       </View>
 
       <View style={styles.indicatorRow}>
