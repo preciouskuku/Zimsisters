@@ -14,6 +14,7 @@ import { Ionicons, AntDesign, FontAwesome } from "@expo/vector-icons";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useNavigation } from "@react-navigation/native";
 
+
 // Define navigation stack params (adjust routes to match your app)
 type RootStackParamList = {
   Login: undefined;
