@@ -16,8 +16,8 @@ const slides = [
   },
   {
     key: '2',
-    title: 'Discover features',
-    subtitle: 'Track your cycle, ask questions, and connect with Zimsisters community',
+    title: 'Learn your body,own your power',
+    subtitle: 'Get friendly tips, badges and tools to track your period, mood and wellness',
     image: require('../../assets/images/onboard.png'),
     backgroundColor: '#fbeaf1',
   },
